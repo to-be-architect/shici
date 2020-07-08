@@ -1,11 +1,10 @@
 language: java
 
 jdk:
-  - oraclejdk8
+  - openjdk8
 
 before-install:
 - sudo mkdir /var/log/shici/
 - sudo chmod a+w /var/log/shici/
 
 install: cd web && mvn package
-
