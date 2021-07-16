@@ -50,6 +50,11 @@ public class ApiController extends AbstractController {
 		return this.poemService.getPoem(id);
 	}
 
+	@GetMapping("/api/poems/today")
+	public Poem getTodayPoem() {
+		return this.poemService.getFeatured();
+	}
+
 	@GetMapping("/api/suggest")
 	public String[] suggest(@RequestParam(value = "q", defaultValue = "") String q) throws IOException {
 		if (q.trim().isEmpty()) {
